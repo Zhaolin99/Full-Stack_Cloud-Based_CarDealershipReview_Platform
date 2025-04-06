@@ -33,7 +33,7 @@ class CarModel(models.Model):
         ('COUPE', 'Coupe'),
         ('TRUCK', 'Truck'),
     ]
-    types = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
     year = models.IntegerField(default=2023,
                                validators=[
                                 MaxValueValidator(2023),
