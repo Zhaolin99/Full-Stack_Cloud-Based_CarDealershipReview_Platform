@@ -13,6 +13,7 @@ class CarMake(models.Model):
     def __str__(self):
         return str(self.id)
 
+
 # Car Model model
 class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
