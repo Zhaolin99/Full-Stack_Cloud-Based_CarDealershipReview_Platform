@@ -121,6 +121,7 @@ def get_dealer_details(request, dealer_id):
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
 
+
 @csrf_exempt
 def get_dealer_reviews(request, dealer_id):
     if dealer_id:
@@ -137,6 +138,7 @@ def get_dealer_reviews(request, dealer_id):
             return JsonResponse({"status": 500, "message": f"Error fetching reviews: {str(e)}"})
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
+
 
 # Create a `add_review` view to submit a review
 def add_review(request):
