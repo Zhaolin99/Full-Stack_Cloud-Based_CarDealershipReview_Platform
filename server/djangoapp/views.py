@@ -97,7 +97,7 @@ def get_dealerships(request, state="All"):
     else:
         endpoint = "/fetchDealers/"+state
     dealerships = get_request(endpoint)
-    return JsonResponse({"status":200,"dealers":dealerships})
+    return JsonResponse({"status": 200, "dealers": dealerships})
 
 
 @csrf_exempt
@@ -107,10 +107,15 @@ def get_dealer_details(request, dealer_id):
         try:
             dealership = get_request(endpoint)
             if dealership:
-                # Wrap the dealer object in an array to match Dealer.js expectation
-                return JsonResponse({"status": 200, "dealer": [dealership]})
+                return JsonResponse({
+                    "status": 200,
+                    "dealer": [dealership]
+                })
             else:
-                return JsonResponse({"status": 404, "message": "Dealer not found"})
+                return JsonResponse({
+                    "status": 404,
+                    "message": "Dealer not found"
+                })
         except Exception as e:
             return JsonResponse({"status": 500, "message": f"Error fetching dealer: {str(e)}"})
     else:
