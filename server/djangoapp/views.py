@@ -135,7 +135,10 @@ def get_dealer_reviews(request, dealer_id):
                 review_detail['sentiment'] = response.get('sentiment', 'unknown')
             return JsonResponse({"status": 200, "reviews": reviews})
         except Exception as e:
-            return JsonResponse({"status": 500, "message": f"Error fetching reviews: {str(e)}"})
+            return JsonResponse({
+                "status": 500,
+                "message": f"Error fetching reviews: {str(e)}"
+            })
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
 
@@ -148,7 +151,10 @@ def add_review(request):
             # response = post_review(data)
             post_review(data)
             return JsonResponse({"status": 200})
-        except Exception as e:
-            return JsonResponse({"status": 401, "message":" Error in posting review"})
+        except Exception:
+            return JsonResponse({
+                "status": 401,
+                "message":" Error in posting review"
+            })
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
