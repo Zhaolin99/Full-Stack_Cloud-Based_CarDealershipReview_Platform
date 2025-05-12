@@ -24,6 +24,7 @@ SmartDealerships is a full-stack web application developed as the capstone proje
 - **Cloud Platform:** IBM Cloud
 
 ## 📂 Project Structure
+```bash
 xrwvm-fullstack_developer_capstone/
 ├── client/ # React frontend
 │ ├── public/
@@ -45,7 +46,7 @@ xrwvm-fullstack_developer_capstone/
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
-
+```
 
 
 ## ⚙️ Installation and Setup
@@ -55,7 +56,7 @@ xrwvm-fullstack_developer_capstone/
      git clone https://github.com/Zhaolin99/xrwvm-fullstack_developer_capstone.git
      cd xrwvm-fullstack_developer_capstone
 
-2. **Backend Setup
+2. **Backend Setup:**
    ```bash
     cd server
     python3 -m venv env
@@ -64,21 +65,21 @@ xrwvm-fullstack_developer_capstone/
     python manage.py migrate
     python manage.py runserver
    
-3. **Frontend Setup
+3. **Frontend Setup:**
    ```bash
     cd ../client
     npm install
     npm start
 
-4. **Access the Application
+4. **Access the Application:**
    ```bash
    http://localhost:3000
 
-5. **Docker Deployment
+5. **Docker Deployment:**
    ```bash
    docker-compose up --build
    http://localhost:8000
-6. **Running Test
+6. **Running Test:**
    ```bash
     cd server
     python manage.py test
