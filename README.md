@@ -25,27 +25,31 @@ SmartDealerships is a full-stack web application developed as the capstone proje
 
 ## 📂 Project Structure
 ```bash
-xrwvm-fullstack_developer_capstone/
-├── client/ # React frontend
-│ ├── public/
-│ └── src/
-│ ├── components/
-│ ├── App.js
-│ └── index.js
+├── .github/ # GitHub Actions workflows for CI/CD
 ├── server/ # Django backend
-│ ├── manage.py
-│ ├── server/
-│ │ ├── settings.py
-│ │ ├── urls.py
+│ ├── database/ # Database configurations and scripts
+│ ├── djangoapp/ # Main Django application
+│ ├── djangoproj/ # Django project settings and configurations
+│ │ ├── init.py
+│ │ ├── asgi.py
+│ │ ├── settings.py # Project settings
+│ │ ├── urls.py # URL routing
 │ │ └── wsgi.py
-│ ├── dealership/
-│ │ ├── models.py
-│ │ ├── views.py
-│ │ ├── serializers.py
-│ │ └── urls.py
-├── Dockerfile
-├── docker-compose.yml
-└── README.md
+| ├── frontend/ # React frontend
+│ |  ├── public/ # Public assets
+│ |  └── src/ # Source files for frontend components
+│ |  ├── components/
+│ |  ├── App.js
+│ |  └── index.js
+| |── Dockerfile # Docker configuration for backend
+| ├── deployment.yaml # Kubernetes deployment file
+| ├── entrypoint.sh # Entry point script for container
+| ├── manage.py # Django management script
+| ├── package.json # Node.js dependencies
+| ├── requirements.txt # Python dependencies
+| |── .gitignore # Files and directories to ignore in Git
+├── LICENSE # License file
+└── README.md # Project documentation
 ```
 
 
