@@ -48,3 +48,55 @@ xrwvm-fullstack_developer_capstone/
 
 
 
+## ⚙️ Installation and Setup
+
+1. **Clone the repository:**
+   ```bash
+     git clone https://github.com/Zhaolin99/xrwvm-fullstack_developer_capstone.git
+     cd xrwvm-fullstack_developer_capstone
+
+2. ** Backend Setup
+   ```bash
+    cd server
+    python3 -m venv env
+    source env/bin/activate
+    pip install -r requirements.txt
+    python manage.py migrate
+    python manage.py runserver
+   
+3. ** Frontend Setup
+   ```bash
+    cd ../client
+    npm install
+    npm start
+
+4. ** Access the Application
+   ```bash
+   http://localhost:3000
+
+5. ** Docker Deployment
+   ```bash
+   docker-compose up --build
+   http://localhost:8000
+6. ** Running Test
+   ```bash
+    cd server
+    python manage.py test
+  
+    cd client
+    npm test
+
+
+
+## 📄 License  
+This project is licensed under the **MIT License**. You are free to use, modify, and distribute the code under the terms specified in the LICENSE file.  
+
+## 🙌 Acknowledgements  
+- [IBM Full Stack Cloud Developer Professional Certificate](https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer)  
+- [Django Documentation](https://docs.djangoproject.com/)  
+- [React Documentation](https://reactjs.org/docs/getting-started.html)  
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)  
+- [Docker Documentation](https://docs.docker.com/)  
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)  
+
+
